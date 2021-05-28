@@ -1,0 +1,1764 @@
+{
+  "settings": {
+    "name": "Loading Animations",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "mobirise5",
+      "title": "Mobirise 5",
+      "styling": {
+        "primaryColor": "#6592e6",
+        "secondaryColor": "#ff6666",
+        "successColor": "#40b0bf",
+        "infoColor": "#47b5ed",
+        "warningColor": "#FFE161",
+        "dangerColor": "#ff9966",
+        "mainFont": "Jost",
+        "display1Font": "Nunito",
+        "display1Size": 4.6,
+        "display2Font": "Nunito",
+        "display2Size": 3,
+        "display5Font": "Nunito",
+        "display5Size": 2,
+        "display7Font": "Nunito",
+        "display7Size": 1.2,
+        "display4Font": "Nunito",
+        "display4Size": 1.1,
+        "isRoundedButtons": false,
+        "isGhostButtonBorder": false,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#3b8047",
+        "#111111"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.3.6",
+    "siteFonts": [
+      {
+        "css": "'Nunito', sans-serif",
+        "name": "Nunito",
+        "url": "https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      }
+    ],
+    "imageResize": true,
+    "chatbutton": {},
+    "favicon": false,
+    "mbrsiteDomain": "76rvrijsa1",
+    "cssOptimize": false,
+    "lazyLoad": false,
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "pwa-switcher": false,
+    "uniqCompNum": 9,
+    "versionPublish": "5.3.6"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Loading Animations",
+        "meta_descr": "Loading Animations",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#fafafa"
+            },
+            ".mbr-section-title": {
+              "color": "#fafafa"
+            }
+          },
+          "_name": "header2",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section class=\"header2\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\" plugins=\"animate-css\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n\n        <input type=\"range\" inline name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"12\" step=\"1\">\n        <select title=\"Align\" name=\"contentAlign\">\n            <option value selected>Left</option>\n            <option value=\"justify-content-center\">Center</option>\n            <option value=\"justify-content-end\">Right</option>\n        </select>\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubitle\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background7.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#111111\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#111111\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"1\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"scrollanimation animated fadeIn animate__slower\" mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row {{contentAlign}}\">\n            <div class=\"col-12 col-lg-{{textWidth}}\">\n                <h1 class=\"mbr-section-title mbr-fonts-style mb-3\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\"><b>Loading Animations</b></h1>\n                <h2 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-2\" mbr-if=\"showSubitle\">Header Subtitle</h2>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Copyright (c) 2021 by kiran raj r (<a href=\"https://codepen.io/kiran-r-raj/\" class=\"text-primary\" target=\"_blank\">https://codepen.io/kiran-r-raj/</a>)<br>\n<br>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n<br>\n<br>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n<br>\n<br>THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n<br>\n<br></p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\">\n                    <a class=\"btn btn-success\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Free Download!</a>\n                    <a class=\"btn btn-success-outline\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Live Demos &gt;</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "syGaKKr2PO",
+          "_anchor": "header2-4",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".container-preloaders": {
+              "display": "grid",
+              "grid-template-columns": "repeat(4, 1fr)",
+              "grid-template-rows": "repeat(3, 1fr)",
+              "grid-gap": "5rem",
+              "justify-items": "center",
+              "align-items": "center",
+              "background-color": "@bg-value"
+            },
+            ".one": {
+              "width": "100px",
+              "animation": "1.5s spin linear infinite"
+            },
+            ".one .circlepath": {
+              "fill": "none",
+              "stroke": "darkgoldenrod",
+              "stroke-width": "3"
+            },
+            ".atom": {
+              "fill": "gold",
+              "stroke": "none"
+            },
+            "@keyframes spin": {
+              "100%": {
+                "transform": "rotate(360deg)"
+              }
+            },
+            ".two": {
+              "width": "100px",
+              "animation": "1s spin linear infinite"
+            },
+            ".two .circlepath": {
+              "fill": "none",
+              "stroke": "darkgoldenrod",
+              "stroke-width": "3"
+            },
+            ".two .atom1": {
+              "fill": "gold",
+              "stroke": "none"
+            },
+            ".three": {
+              "width": "50px",
+              "height": "50px",
+              "border-radius": "50%",
+              "border-top": "2px solid gold",
+              "border-right": "2px solid transparent",
+              "animation": "anim3 1s linear infinite"
+            },
+            "@keyframes anim3": {
+              "to": {
+                "transform": "rotate(360deg)"
+              }
+            },
+            ".four": {
+              "width": "50px",
+              "height": "50px",
+              "border-radius": "50%",
+              "border": "2px solid #111",
+              "border-top": "2px solid gold",
+              "border-bottom": "2px solid gold",
+              "animation": "anim4 1s linear infinite"
+            },
+            "@keyframes anim4": {
+              "to": {
+                "transform": "rotate(360deg)"
+              }
+            },
+            ".five": {
+              "width": "75px",
+              "height": "75px",
+              "display": "flex",
+              "justify-content": "center",
+              "align-items": "center",
+              "position": "relative"
+            },
+            ".five .line": {
+              "position": "absolute",
+              "width": "50px",
+              "height": "50px",
+              "border-radius": "50%",
+              "border": "2px solid #111"
+            },
+            ".five .line:nth-child(1)": {
+              "position": "absolute",
+              "width": "25px",
+              "height": "25px",
+              "border-top": "2px solid gold",
+              "border-bottom": "2px solid gold",
+              "animation": "anim4 800ms linear infinite"
+            },
+            ".five .line:nth-child(2)": {
+              "border-left": "2px solid gold",
+              "border-right": "2px solid gold",
+              "animation": "anim4 1200ms linear infinite"
+            },
+            ".six": {
+              "width": "100px",
+              "height": "100px",
+              "display": "flex",
+              "justify-content": "center",
+              "align-items": "center",
+              "position": "relative"
+            },
+            ".six .line": {
+              "position": "absolute",
+              "width": "50px",
+              "height": "50px",
+              "border-radius": "50%",
+              "border": "2px solid #111"
+            },
+            ".six .line:nth-child(1)": {
+              "position": "absolute",
+              "width": "25px",
+              "height": "25px",
+              "border-right": "2px solid gold",
+              "border-bottom": "2px solid gold",
+              "animation": "anim4 600ms linear infinite"
+            },
+            ".six .line:nth-child(2)": {
+              "border-left": "2px solid gold",
+              "border-top": "2px solid gold",
+              "animation": "anim4 1200ms linear infinite"
+            },
+            ".six .line:nth-child(3)": {
+              "position": "absolute",
+              "width": "75px",
+              "height": "75px",
+              "border-right": "2px solid gold",
+              "border-top": "2px solid gold",
+              "animation": "anim4 900ms linear infinite"
+            },
+            ".seven": {
+              "width": "100px",
+              "height": "100px",
+              "display": "flex",
+              "justify-content": "center",
+              "align-items": "center",
+              "position": "relative"
+            },
+            ".seven .line": {
+              "position": "absolute",
+              "border-radius": "50%",
+              "border": "2px solid #111",
+              "border-bottom": "2px solid gold"
+            },
+            ".seven .line:nth-child(1)": {
+              "width": "25px",
+              "height": "25px",
+              "animation": "anim4 600ms linear infinite"
+            },
+            ".seven .line:nth-child(2)": {
+              "width": "50px",
+              "height": "50px",
+              "animation": "anim4 800ms linear infinite"
+            },
+            ".seven .line:nth-child(3)": {
+              "width": "75px",
+              "height": "75px",
+              "animation": "anim4 1000ms linear infinite"
+            },
+            ".seven .line:nth-child(4)": {
+              "width": "100px",
+              "height": "100px",
+              "animation": "anim4 1200ms linear infinite"
+            },
+            ".eight": {
+              "width": "50px",
+              "height": "50px",
+              "border-radius": "50%",
+              "border": "2px solid #111",
+              "border-top": "2px solid gold",
+              "border-bottom": "2px solid gold",
+              "animation": "anim8 1s linear infinite",
+              "position": "relative",
+              "display": "flex",
+              "justify-content": "center",
+              "align-items": "center"
+            },
+            ".eight .center": {
+              "width": "20px",
+              "height": "20px",
+              "background-color": "rgba(255, 215, 0, 0.6)",
+              "position": "absolute",
+              "border-radius": "50%"
+            },
+            "@keyframes anim8": {
+              "to": {
+                "transform": "rotate(360deg)"
+              }
+            },
+            ".nine": {
+              "width": "50px",
+              "height": "50px",
+              "border-radius": "50%",
+              "border": "2px solid #111",
+              "border-top": "2px solid gold",
+              "border-bottom": "2px solid gold",
+              "animation": "anim9 1s linear infinite",
+              "position": "relative",
+              "display": "flex",
+              "justify-content": "center",
+              "align-items": "center"
+            },
+            ".nine .center": {
+              "width": "20px",
+              "height": "20px",
+              "background-color": "rgba(255, 215, 0, 0.6)",
+              "position": "absolute",
+              "border-radius": "50%",
+              "animation": "scaleUp 1s linear infinite forwards"
+            },
+            "@keyframes anim9": {
+              "to": {
+                "transform": "rotate(360deg)"
+              }
+            },
+            "@keyframes scaleUp": {
+              "0%": {
+                "transform": "scale(0.2)",
+                "opacity": "1"
+              },
+              "100%": {
+                "transform": "scale(1.2)",
+                "opacity": "0"
+              }
+            },
+            ".ten": {
+              "width": "10px",
+              "height": "10px",
+              "border-radius": "50%",
+              "border": "5px solid #111",
+              "border-top": "5px solid gold",
+              "border-bottom": "5px solid gold",
+              "animation": "anim10 2s linear infinite",
+              "position": "relative",
+              "display": "flex",
+              "justify-content": "center",
+              "align-items": "center"
+            },
+            ".ten .center": {
+              "width": "20px",
+              "height": "20px",
+              "background-color": "rgba(255, 215, 0, 0.6)",
+              "position": "absolute",
+              "border-radius": "50%",
+              "animation": "scaleUp 2s linear infinite forwards"
+            },
+            "@keyframes anim10": {
+              "0%": {
+                "opacity": "1"
+              },
+              "50%": {
+                "width": "50px",
+                "height": "50px",
+                "transform": "rotate(360deg)"
+              },
+              "100%": {
+                "opacity": "0"
+              }
+            },
+            ".eleven": {
+              "width": "50px",
+              "height": "50px",
+              "border-radius": "50%",
+              "border-top": "10px solid #4285f4",
+              "border-left": "10px solid #db4437",
+              "border-bottom": "10px solid #f4b400",
+              "border-right": "10px solid #0f9d58",
+              "animation": "anim11 2s linear infinite"
+            },
+            "@keyframes anim11": {
+              "to": {
+                "transform": "rotate(360deg)"
+              }
+            },
+            ".twelve": {
+              "width": "100px",
+              "height": "100px",
+              "position": "relative",
+              "display": "flex",
+              "justify-content": "center",
+              "align-items": "center"
+            },
+            ".twelve .circle1, .twelve .circle2": {
+              "position": "absolute",
+              "width": "10px",
+              "height": "10px",
+              "border-radius": "50%",
+              "border": "2px solid orange",
+              "animation": "anim12 1.2s ease-in infinite"
+            },
+            ".twelve .circle2": {
+              "width": "60px",
+              "height": "60px",
+              "animation": "anim12-2 1.2s ease-out infinite",
+              "border": "2px solid red"
+            },
+            "@keyframes anim12": {
+              "100%": {
+                "width": "60px",
+                "height": "60px",
+                "opacity": "0"
+              }
+            },
+            "@keyframes anim12-2": {
+              "0%": {
+                "opacity": "0"
+              },
+              "100%": {
+                "width": "10px",
+                "height": "10px",
+                "opacity": "1"
+              }
+            }
+          },
+          "_name": "content4",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section class=\"content4\" group=\"Content\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" step=\"1\" value=\"12\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#111111\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"title col-md-12 col-lg-{{textWidth}}\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-4\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\">\n                    <b>Article Title with Solid Background</b>\n                </h3>\n                <h4 class=\"mbr-section-subtitle align-center mbr-fonts-style mb-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                    You can arrange your articles with the Mobirise website design software.\n                </h4>\n<div class=\"container-preloaders\">\n  <svg class=\"one\" viewBox=\"0 0 100 100\">\n    <circle class=\"atom\" cx=\"50\" cy=\"50\" r=\"4\"></circle>\n    <circle class=\"circlepath\" cx=\"50\" cy=\"50\" r=\"40\"></circle>\n    <circle class=\"atom\" cx=\"50\" cy=\"35\" r=\"4\"></circle>\n    <circle class=\"circlepath\" cx=\"50\" cy=\"50\" r=\"25\"></circle>\n    <circle class=\"atom\" cx=\"50\" cy=\"20\" r=\"4\"></circle>\n  </svg>\n  <svg class=\"two\" viewBox=\"0 0 100 100\">\n    <circle class=\"circlepath\" cx=\"50\" cy=\"50\" r=\"40\"></circle>\n    <circle class=\"atom1\" cx=\"50\" cy=\"10\" r=\"8\"></circle>\n  </svg>\n  <div class=\"three\"></div>\n  <div class=\"four\"></div>\n  <div class=\"five\">\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n  </div>\n\n  <div class=\"six\">\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n  </div>\n  <div class=\"seven\">\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n  </div>\n\n  <div class=\"eight\">\n    <div class=\"center\"></div>\n  </div>\n\n  <div class=\"nine\">\n    <div class=\"center\"></div>\n  </div>\n\n  <div class=\"ten\">\n    <div class=\"center\"></div>\n  </div>\n\n  <div class=\"eleven\"></div>\n\n  <div class=\"twelve\">\n    <div class=\"circle1\"></div>\n    <div class=\"circle2\"></div>\n  </div>\n</div>                \n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-primary\" href=\"https://mobiri.se\">LEARN MORE</a>\n                    <a class=\"btn btn-primary-outline\" href=\"https://mobiri.se\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "syG25OdwaJ",
+          "_anchor": "content4-0",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".container-preloaders": {
+              "display": "grid",
+              "grid-template-columns": "repeat(4, 1fr)",
+              "grid-template-rows": "repeat(2, 1fr)",
+              "grid-gap": "5rem",
+              "justify-items": "center",
+              "align-items": "center",
+              "background-color": "@bg-value"
+            },
+            ".one": {
+              "width": "100px",
+              "transform-origin": "center",
+              "animation": "rotate 4s linear infinite"
+            },
+            ".one circle": {
+              "fill": "none",
+              "stroke": "red",
+              "stroke-width": "10",
+              "stroke-dasharray": "1, 20"
+            },
+            "@keyframes rotate": {
+              "100%": {
+                "transform": "rotate(360deg)"
+              }
+            },
+            ".lines": {
+              "width": "100px",
+              "height": "100px",
+              "position": "relative"
+            },
+            ".l2": {
+              "display": "flex",
+              "justify-content": "space-around",
+              "align-items": "center"
+            },
+            ".l2 .line": {
+              "height": "20px",
+              "width": "4px",
+              "background-color": "#fff",
+              "animation": "topBottom 800ms linear infinite"
+            },
+            ".l2 .line:nth-child(1)": {
+              "animation-delay": "0s"
+            },
+            ".l2 .line:nth-child(2)": {
+              "animation-delay": "0.2s"
+            },
+            ".l2 .line:nth-child(3)": {
+              "animation-delay": "0.4s"
+            },
+            ".l2 .line:nth-child(4)": {
+              "animation-delay": "0.6s"
+            },
+            "@keyframes topBottom": {
+              "0%": {
+                "transform": "translateY(0px)"
+              },
+              "25%": {
+                "transform": "translateY(40px)"
+              },
+              "75%": {
+                "transform": "translateY(-40px)"
+              },
+              "100%": {
+                "transform": "translateY(0px)"
+              }
+            },
+            ".l3": {
+              "display": "flex",
+              "justify-content": "space-around",
+              "align-items": "center"
+            },
+            ".l3 .line": {
+              "height": "0px",
+              "width": "4px",
+              "left": "0px",
+              "background-color": "#fff",
+              "animation": "expand 900ms ease infinite"
+            },
+            ".l3 .line:nth-child(1)": {
+              "animation-delay": "0s"
+            },
+            ".l3 .line:nth-child(2)": {
+              "animation-delay": "0.2s"
+            },
+            ".l3 .line:nth-child(3)": {
+              "animation-delay": "0.4s"
+            },
+            ".l3 .line:nth-child(4)": {
+              "animation-delay": "0.6s"
+            },
+            "@keyframes expand": {
+              "0%, 100%": {
+                "height": "0px"
+              },
+              "50%": {
+                "height": "40px"
+              }
+            },
+            ".l4": {
+              "display": "flex",
+              "justify-content": "space-around",
+              "align-items": "center"
+            },
+            ".l4 .line": {
+              "height": "2px",
+              "width": "4px",
+              "background-color": "#fff",
+              "transform-origin": "bottom",
+              "animation": "expandTop 900ms ease infinite"
+            },
+            ".l4 .line:nth-child(1)": {
+              "animation-delay": "0s"
+            },
+            ".l4 .line:nth-child(2)": {
+              "animation-delay": "0.2s"
+            },
+            ".l4 .line:nth-child(3)": {
+              "animation-delay": "0.4s"
+            },
+            ".l4 .line:nth-child(4)": {
+              "animation-delay": "0.6s"
+            },
+            "@keyframes expandTop": {
+              "0%, 100%": {
+                "transform": "scaleY(1)"
+              },
+              "50%": {
+                "transform": "scaleY(20)"
+              }
+            },
+            ".l5": {
+              "display": "flex",
+              "justify-content": "space-around",
+              "align-items": "center"
+            },
+            ".l5 .line": {
+              "height": "20px",
+              "width": "4px",
+              "background-color": "orange",
+              "animation": "blink 1s ease infinite"
+            },
+            ".l5 .line:nth-child(1), .l5 .line:nth-child(10)": {
+              "animation-delay": "0.8s"
+            },
+            ".l5 .line:nth-child(2), .l5 .line:nth-child(9)": {
+              "animation-delay": "0.6s"
+            },
+            ".l5 .line:nth-child(3), .l5 .line:nth-child(8)": {
+              "animation-delay": "0.4s"
+            },
+            ".l5 .line:nth-child(4), .l5 .line:nth-child(7)": {
+              "animation-delay": "0.2s"
+            },
+            ".l5 .line:nth-child(6), .l5 .line:nth-child(5)": {
+              "animation-delay": "0s"
+            },
+            "@keyframes blink": {
+              "0%, 100%": {
+                "opacity": "0"
+              },
+              "50%": {
+                "opacity": "1"
+              }
+            },
+            ".l6": {
+              "display": "flex",
+              "justify-content": "space-around",
+              "align-items": "center",
+              "overflow": "hidden",
+              "position": "relative",
+              "height": "20px",
+              "background-color": "blue"
+            },
+            ".l6 .line:nth-child(1)": {
+              "position": "absolute",
+              "left": "0",
+              "bottom": "0",
+              "height": "10px",
+              "width": "100%",
+              "background-color": "#fff",
+              "animation": "expandRight 2s ease infinite"
+            },
+            ".l6 .line:nth-child(2)": {
+              "position": "absolute",
+              "right": "0",
+              "top": "0",
+              "height": "10px",
+              "width": "100%",
+              "animation": "expandLeft 2s ease infinite",
+              "background-color": "#fff"
+            },
+            "@keyframes expandRight": {
+              "0%": {
+                "transform-origin": "left",
+                "transform": "translateX(0%)"
+              },
+              "50%": {
+                "transform": "translateX(-100%)"
+              },
+              "100%": {
+                "transform": "translateX(0%)"
+              }
+            },
+            "@keyframes expandLeft": {
+              "0%": {
+                "transform-origin": "right",
+                "transform": "translateX(100%)"
+              },
+              "50%": {
+                "transform": "translateX(0%)",
+                "transform-origin": "left"
+              },
+              "100%": {
+                "transform": "translateX(100%)"
+              }
+            },
+            ".l7": {
+              "position": "relative",
+              "width": "80px",
+              "height": "80px",
+              "animation": "900ms linear rotateMain infinite"
+            },
+            ".l7 .line": {
+              "position": "absolute",
+              "background-color": "#fff"
+            },
+            ".l7 .line:nth-child(1)": {
+              "left": "0",
+              "top": "40px",
+              "animation": "600ms ease-in growWidth infinite"
+            },
+            ".l7 .line:nth-child(2)": {
+              "right": "0",
+              "top": "40px",
+              "animation": "600ms ease-in growWidth infinite"
+            },
+            ".l7 .line:nth-child(3)": {
+              "left": "40px",
+              "animation": "600ms ease-in growHeight infinite"
+            },
+            ".l7 .line:nth-child(4)": {
+              "left": "40px",
+              "bottom": "0px",
+              "animation": "600ms ease-in growHeight infinite"
+            },
+            "@keyframes growHeight": {
+              "0%, 100%": {
+                "height": "0px",
+                "width": "2px"
+              },
+              "50%": {
+                "height": "40px",
+                "width": "2px"
+              }
+            },
+            "@keyframes growWidth": {
+              "0%, 100%": {
+                "width": "0px",
+                "height": "2px"
+              },
+              "50%": {
+                "width": "40px",
+                "height": "2px"
+              }
+            },
+            "@keyframes rotateMain": {
+              "0%": {
+                "transform": "rotate(0deg)"
+              },
+              "100%": {
+                "transform": "rotate(360deg)"
+              }
+            },
+            ".l8": {
+              "display": "flex",
+              "justify-content": "space-around",
+              "align-items": "center"
+            },
+            ".l8 .line": {
+              "height": "20px",
+              "width": "4px",
+              "background-color": "rgb(255, 0, 76)",
+              "animation": "growLine 1s ease infinite"
+            },
+            ".l8 .line:nth-child(1), .l8 .line:nth-child(10)": {
+              "animation-delay": "0.8s"
+            },
+            ".l8 .line:nth-child(2), .l8 .line:nth-child(9)": {
+              "animation-delay": "0.6s"
+            },
+            ".l8 .line:nth-child(3), .l8 .line:nth-child(8)": {
+              "animation-delay": "0.4s"
+            },
+            ".l8 .line:nth-child(4), .l8 .line:nth-child(7)": {
+              "animation-delay": "0.2s"
+            },
+            ".l8 .line:nth-child(6), .l8 .line:nth-child(5)": {
+              "animation-delay": "0s"
+            },
+            "@keyframes growLine": {
+              "0%, 100%": {
+                "transform": "scale(0)"
+              },
+              "50%": {
+                "transform": "scale(1.5)"
+              }
+            }
+          },
+          "_name": "content4",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section class=\"content4\" group=\"Content\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" step=\"1\" value=\"12\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#111111\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"title col-md-12 col-lg-{{textWidth}}\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-4\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\">\n                    <b>Article Title with Solid Background</b>\n                </h3>\n                <h4 class=\"mbr-section-subtitle align-center mbr-fonts-style mb-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                    You can arrange your articles with the Mobirise website design software.\n                </h4>\n                \n                <div class=\"container-preloaders\">\n  <svg class=\"one\" viewBox=\"25 25 50 50\">\n    <circle cx=\"50\" cy=\"50\" r=\"20\"></circle>\n  </svg>\n\n  <div class=\"lines l2\">\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n  </div>\n\n  <div class=\"lines l3\">\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n  </div>\n\n  <div class=\"lines l4\">\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n  </div>\n\n  <div class=\"lines l5\">\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n  </div>\n\n  <div class=\"lines l6\">\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n  </div>\n\n  <div class=\"lines l7\">\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n  </div>\n\n  <div class=\"lines l8\">\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n    <div class=\"line\"></div>\n  </div>\n</div>\n                \n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-primary\" href=\"https://mobiri.se\">LEARN MORE</a>\n                    <a class=\"btn btn-primary-outline\" href=\"https://mobiri.se\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "syG5rhBAuP",
+          "_anchor": "content4-1",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".container-preloaders": {
+              "background-color": "@bg-value",
+              "display": "grid",
+              "grid-template-columns": "repeat(4, 1fr)",
+              "grid-template-rows": "repeat(3, 1fr)",
+              "grid-gap": "5rem",
+              "justify-items": "center",
+              "align-items": "center"
+            },
+            ".dots": {
+              "width": "100px",
+              "height": "30px",
+              "display": "flex",
+              "align-items": "center",
+              "justify-content": "space-between"
+            },
+            ".dot": {
+              "width": "20px",
+              "height": "20px",
+              "border-radius": "50%",
+              "background-color": "white"
+            },
+            ".dot:nth-child(1)": {
+              "transform": "translateX(100%)",
+              "background-color": "orange",
+              "animation": "left 1s ease alternate infinite"
+            },
+            ".dot:nth-child(2)": {
+              "animation": "center 1s ease infinite"
+            },
+            ".dot:nth-child(3)": {
+              "transform": "translateX(-100%)",
+              "background-color": "green",
+              "animation": "right 1s ease alternate infinite"
+            },
+            "@keyframes left": {
+              "0%": {
+                "transform": "translateX(100%)"
+              },
+              "50%": {
+                "transform": "translateX(-10%)"
+              },
+              "100%": {
+                "transform": "translateX(100%)"
+              }
+            },
+            "@keyframes right": {
+              "0%": {
+                "transform": "translateX(-100%)"
+              },
+              "50%": {
+                "transform": "translateX(10%)"
+              },
+              "100%": {
+                "transform": "translateX(-100%)"
+              }
+            },
+            "@keyframes center": {
+              "0%, 100%": {
+                "transform": "scale(0.5)"
+              },
+              "50%": {
+                "transform": "scale(1)"
+              }
+            },
+            ".two .dot:nth-child(1)": {
+              "background-color": "orange",
+              "animation": "twoleft 1s ease-in alternate infinite",
+              "transform": "translateX(100%)"
+            },
+            ".two .dot:nth-child(2)": {
+              "animation": "none"
+            },
+            ".two .dot:nth-child(3)": {
+              "background-color": "green",
+              "transform": "translateX(-100%)",
+              "animation": "tworight 1s ease-out alternate infinite"
+            },
+            "@keyframes twoleft": {
+              "0%": {
+                "transform": "translateX(-100%)"
+              },
+              "50%, 100%": {
+                "transform": "translateX(100%)"
+              }
+            },
+            "@keyframes tworight": {
+              "50%": {
+                "transform": "translateX(-100%)"
+              },
+              "100%": {
+                "transform": "translateX(100%)"
+              }
+            },
+            ".three.dots": {
+              "width": "150px"
+            },
+            ".three .dot": {
+              "animation": "fade ease 2s infinite"
+            },
+            ".three .dot:nth-child(1)": {
+              "animation-delay": "0.4s"
+            },
+            ".three .dot:nth-child(2)": {
+              "animation-delay": "0.8s"
+            },
+            ".three .dot:nth-child(3)": {
+              "animation-delay": "1.2s"
+            },
+            "@keyframes fade": {
+              "0%": {
+                "opacity": "0"
+              },
+              "50%": {
+                "opacity": "1"
+              },
+              "100%": {
+                "opacity": "0"
+              }
+            },
+            ".four .dot": {
+              "transform": "translateY(-100%)",
+              "animation": "upDown 1s ease-in-out alternate infinite"
+            },
+            ".four .dot:nth-of-type(1)": {
+              "animation-delay": "0.5s"
+            },
+            ".four .dot:nth-of-type(2)": {
+              "animation-delay": "0.25s"
+            },
+            "@keyframes upDown": {
+              "0%": {
+                "transform": "translateY(-100%)"
+              },
+              "100%": {
+                "transform": "translateY(100%)"
+              }
+            },
+            ".five .dot": {
+              "transform": "translateY(-100%)",
+              "background-color": "#fff",
+              "animation": "centerDot 1s ease-in-out alternate infinite"
+            },
+            ".five .dot:nth-child(2)": {
+              "z-index": "10"
+            },
+            ".five .dot:nth-of-type(1)": {
+              "animation": "leftDot 1s ease-in-out alternate infinite"
+            },
+            ".five .dot:nth-of-type(3)": {
+              "animation": "rightDot 1s ease-in-out alternate infinite"
+            },
+            "@keyframes centerDot": {
+              "0%": {
+                "transform": "scale(1.5)"
+              },
+              "45%, 55%": {
+                "transform": "scale(1)"
+              },
+              "100%": {
+                "transform": "scale(1.5)"
+              }
+            },
+            "@keyframes leftDot": {
+              "0%": {
+                "transform": "translateX(40px) scale(0.75)"
+              },
+              "45%, 55%": {
+                "transform": "translateX(-20px) scale(1)"
+              },
+              "100%": {
+                "transform": "translateX(40px) scale(0.75)"
+              }
+            },
+            "@keyframes rightDot": {
+              "0%": {
+                "transform": "translateX(-40px) scale(0.75)"
+              },
+              "45%, 55%": {
+                "transform": "translateX(20px) scale(1)"
+              },
+              "100%": {
+                "transform": "translateX(-40px) scale(0.75)"
+              }
+            },
+            ".six.dots": {
+              "position": "relative",
+              "width": "60px",
+              "height": "60px",
+              "animation": "rotateMain 1s linear infinite forwards"
+            },
+            ".six .dot": {
+              "position": "absolute",
+              "background-color": "#fff",
+              "animation": "none",
+              "transform": "translate(0px)"
+            },
+            ".six .dot:nth-of-type(1)": {
+              "left": "0",
+              "top": "0"
+            },
+            ".six .dot:nth-of-type(2)": {
+              "left": "0",
+              "bottom": "0"
+            },
+            ".six .dot:nth-of-type(3)": {
+              "right": "0",
+              "top": "0"
+            },
+            ".six .dot:nth-of-type(4)": {
+              "right": "0",
+              "bottom": "0"
+            },
+            "@keyframes rotateMain": {
+              "100%": {
+                "transform": "rotate(360deg)"
+              }
+            },
+            ".seven.dots": {
+              "position": "relative",
+              "width": "80px",
+              "height": "80px",
+              "animation": "rotateMain 1s ease infinite forwards"
+            },
+            ".seven .dot": {
+              "width": "20px",
+              "height": "20px",
+              "position": "absolute",
+              "background-color": "#fff",
+              "animation": "changePos 1s linear infinite forwards",
+              "transform": "translate(0px)"
+            },
+            ".seven .dot:nth-of-type(1)": {
+              "left": "0%",
+              "top": "0"
+            },
+            ".seven .dot:nth-of-type(2)": {
+              "left": "0",
+              "top": "100%"
+            },
+            ".seven .dot:nth-of-type(3)": {
+              "left": "100%",
+              "top": "0"
+            },
+            ".seven .dot:nth-of-type(4)": {
+              "left": "100%",
+              "top": "100%"
+            },
+            "@keyframes changePos": {
+              "50%": {
+                "top": "50%",
+                "left": "50%",
+                "transform": "translate(-50%, -50%) scale(0.5)"
+              }
+            },
+            ".eight.dots": {
+              "display": "flex",
+              "justify-content": "space-between",
+              "position": "relative",
+              "width": "150px"
+            },
+            ".eight .dot": {
+              "animation": "none",
+              "position": "relative"
+            },
+            ".eight .dot:after": {
+              "content": "\"\"",
+              "position": "absolute",
+              "background-color": "inherit",
+              "display": "block",
+              "width": "100%",
+              "height": "100%",
+              "border-radius": "50%",
+              "animation": "beat 900ms ease-in-out forwards infinite"
+            },
+            ".eight .dot:nth-child(2):after": {
+              "animation-delay": "200ms"
+            },
+            ".eight .dot:nth-child(3):after": {
+              "animation-delay": "400ms"
+            },
+            "@keyframes beat": {
+              "0%": {
+                "opacity": "1",
+                "transform": "scale(1)"
+              },
+              "100%": {
+                "opacity": "0",
+                "transform": "scale(3)"
+              }
+            },
+            ".nine.dots": {
+              "height": "100px",
+              "width": "100px",
+              "position": "relative",
+              "animation": "smoothRotate 3s ease infinite forwards",
+              "display": "flex",
+              "justify-content": "center",
+              "align-items": "center"
+            },
+            ".nine .dot": {
+              "width": "10px",
+              "height": "10px",
+              "animation": "none",
+              "position": "absolute",
+              "transform": "translate(0px)",
+              "display": "flex",
+              "justify-content": "center",
+              "align-items": "center"
+            },
+            ".nine .dot:nth-child(1):after, .nine .dot:nth-child(3):after": {
+              "content": "\"\"",
+              "width": "100%",
+              "height": "100%",
+              "display": "block",
+              "background-color": "inherit",
+              "border-radius": "50%",
+              "transform": "translateY(0px)"
+            },
+            ".nine .dot:nth-child(1):after": {
+              "animation": "anim1 300ms ease infinite alternate forwards"
+            },
+            ".nine .dot:nth-child(3):after": {
+              "animation": "anim2 300ms ease infinite alternate forwards"
+            },
+            "@keyframes anim1": {
+              "0%, 100%": {
+                "transform": "translateY(0px)"
+              },
+              "50%": {
+                "transform": "translateY(50px)"
+              }
+            },
+            "@keyframes anim2": {
+              "0%, 100%": {
+                "transform": "translateY(0px)"
+              },
+              "50%": {
+                "transform": "translateY(-50px)"
+              }
+            },
+            ".nine .dot:nth-child(1)": {
+              "top": "-5px"
+            },
+            ".nine .dot:nth-child(2)": {
+              "top": "calc(50% - 5px)"
+            },
+            ".nine .dot:nth-child(3)": {
+              "top": "calc(100% - 5px)"
+            },
+            "@keyframes smoothRotate": {
+              "0%": {
+                "transform": "rotateZ(0deg) translate3d(0, 0, 0)"
+              },
+              "100%": {
+                "transform": "rotateZ(720deg) translate3d(0, 0, 0)"
+              }
+            }
+          },
+          "_name": "content4",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section class=\"content4\" group=\"Content\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" step=\"1\" value=\"12\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#111111\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"title col-md-12 col-lg-{{textWidth}}\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-4\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\">\n                    <b>Article Title with Solid Background</b>\n                </h3>\n                <h4 class=\"mbr-section-subtitle align-center mbr-fonts-style mb-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                    You can arrange your articles with the Mobirise website design software.\n                </h4>\n                \n                <div class=\"container-preloaders\">\n  <div class=\"dots one\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots two\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots three\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots four\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots five\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots six\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"seven dots\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots eight\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots nine\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n</div>\n                \n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-primary\" href=\"https://mobiri.se\">LEARN MORE</a>\n                    <a class=\"btn btn-primary-outline\" href=\"https://mobiri.se\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "syG7ydcYRh",
+          "_anchor": "content4-2",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".container-preloaders": {
+              "display": "grid",
+              "grid-template-columns": "repeat(4, 1fr)",
+              "grid-template-rows": "repeat(3, 1fr)",
+              "align-items": "center",
+              "justify-items": "center",
+              "grid-gap": "5rem",
+              "background-color": "@bg-value"
+            },
+            ".dots": {
+              "position": "relative",
+              "width": "100px",
+              "height": "100px",
+              "display": "flex",
+              "justify-content": "space-around",
+              "align-items": "center"
+            },
+            ".dot": {
+              "width": "20px",
+              "height": "20px",
+              "background-color": "#fff"
+            },
+            ".dot1 .dot:nth-child(1)": {
+              "animation-delay": "0s"
+            },
+            ".dot1 .dot:nth-child(2)": {
+              "animation-delay": "0.2s"
+            },
+            ".dot1 .dot:nth-child(3)": {
+              "animation-delay": "0.4s"
+            },
+            ".dot1 .dot": {
+              "border-radius": "50%",
+              "animation": "outSide 1.2s linear forwards infinite"
+            },
+            "@keyframes outSide": {
+              "50%": {
+                "transform": "translateY(0) rotate(0deg)",
+                "filter": "blur(0)",
+                "opacity": "1"
+              },
+              "100%": {
+                "transform": "translateY(-800px) rotate(-720deg)",
+                "filter": "blur(50px)",
+                "opacity": "0"
+              }
+            },
+            ".dot2 .dot:nth-child(1)": {
+              "animation-delay": "0s"
+            },
+            ".dot2 .dot:nth-child(2)": {
+              "animation-delay": "0.4s"
+            },
+            ".dot2 .dot:nth-child(3)": {
+              "animation-delay": "0.8s"
+            },
+            ".dot2 .dot": {
+              "border-radius": "50%",
+              "animation": "topDown2 1.2s linear forwards infinite"
+            },
+            "@keyframes topDown2": {
+              "0%, 100%": {
+                "transform": "translateY(0px)"
+              },
+              "25%": {
+                "transform": "translateY(20px)",
+                "background-color": "orange"
+              },
+              "75%": {
+                "transform": "translateY(-20px)",
+                "background-color": "red"
+              }
+            },
+            ".dot3": {
+              "width": "50px",
+              "height": "50px",
+              "position": "relative"
+            },
+            ".dot3 .dot": {
+              "position": "absolute"
+            },
+            ".dot3 .dot:nth-child(1)": {
+              "border-top-left-radius": "100%",
+              "top": "0",
+              "left": "0",
+              "animation": "moveAway3 1s linear forwards infinite"
+            },
+            ".dot3 .dot:nth-child(2)": {
+              "border-top-right-radius": "100%",
+              "left": "100%",
+              "top": "0",
+              "animation": "moveAway3 2s linear forwards infinite"
+            },
+            ".dot3 .dot:nth-child(3)": {
+              "border-bottom-left-radius": "100%",
+              "top": "100%",
+              "left": "0",
+              "animation": "moveAway3 2s linear forwards infinite"
+            },
+            ".dot3 .dot:nth-child(4)": {
+              "border-bottom-right-radius": "100%",
+              "top": "100%",
+              "left": "100%",
+              "animation": "moveAway3 1s linear forwards infinite"
+            },
+            "@keyframes moveAway3": {
+              "0%, 10%, 90%, 100%": {
+                "transform": "translate(0px)"
+              },
+              "50%": {
+                "top": "50%",
+                "left": "50%"
+              }
+            },
+            ".dot4": {
+              "width": "50px",
+              "height": "50px",
+              "position": "relative"
+            },
+            ".dot4 .dot": {
+              "position": "absolute",
+              "border-radius": "50%",
+              "animation": "moveToCenter 1s cubic-bezier(0.39, 0.575, 0.565, 1) alternate infinite, flip4 1s 500ms cubic-bezier(0.39, 0.575, 0.565, 1) alternate infinite"
+            },
+            ".dot4 .dot:nth-child(1)": {
+              "top": "0",
+              "left": "0"
+            },
+            ".dot4 .dot:nth-child(2)": {
+              "left": "100%",
+              "top": "0"
+            },
+            ".dot4 .dot:nth-child(3)": {
+              "top": "100%",
+              "left": "0"
+            },
+            ".dot4 .dot:nth-child(4)": {
+              "top": "100%",
+              "left": "100%"
+            },
+            "@keyframes moveToCenter": {
+              "50%": {
+                "top": "50%",
+                "left": "50%",
+                "background-color": "red",
+                "transform": "translate(-50%, -50%) scale(0.1)"
+              }
+            },
+            "@keyframes flip4": {
+              "0%": {
+                "transform": "rotate3d(1, 1, 0, 0deg)",
+                "opacity": "1"
+              },
+              "100%": {
+                "transform": "rotate3d(-1, 1, 0, 70deg)",
+                "opacity": "0"
+              }
+            },
+            ".dot5": {
+              "display": "flex",
+              "justify-content": "center",
+              "align-items": "center",
+              "width": "100px",
+              "height": "100px",
+              "position": "relative",
+              "animation": "rotate5 2s ease alternate infinite"
+            },
+            ".dot5 .dot": {
+              "width": "20px",
+              "height": "20px",
+              "position": "absolute",
+              "animation": "moveToCenter2 2s ease alternate infinite"
+            },
+            ".dot5 .dot:nth-child(1)": {
+              "top": "0",
+              "left": "0",
+              "border-top-left-radius": "100%",
+              "background-color": "orange"
+            },
+            ".dot5 .dot:nth-child(2)": {
+              "left": "calc(100% - 20px)",
+              "top": "0",
+              "border-top-right-radius": "100%",
+              "background-color": "green"
+            },
+            ".dot5 .dot:nth-child(3)": {
+              "top": "calc(100% - 20px)",
+              "left": "0",
+              "border-bottom-left-radius": "100%",
+              "background-color": "green"
+            },
+            ".dot5 .dot:nth-child(4)": {
+              "top": "calc(100% - 20px)",
+              "left": "calc(100% - 20px)",
+              "border-bottom-right-radius": "100%",
+              "background-color": "orange"
+            },
+            "@keyframes moveToCenter2": {
+              "50%": {
+                "opacity": "0",
+                "top": "calc(50% - 10px)",
+                "left": "calc(50% - 10px)",
+                "transform": "translate(-calc(50% - 10px), -calc(50% - 10px)) scale(2)"
+              }
+            },
+            "@keyframes rotate5": {
+              "50%": {
+                "transform": "rotate(360deg)"
+              }
+            },
+            ".dot6 .dot": {
+              "animation": "anim6 2s ease alternate infinite",
+              "border-radius": "50%"
+            },
+            ".dot6 .dot:nth-child(1)": {
+              "animation-delay": "0.9s"
+            },
+            ".dot6 .dot:nth-child(2)": {
+              "animation-delay": "0.6s"
+            },
+            ".dot6 .dot:nth-child(3)": {
+              "animation-delay": "0.3s"
+            },
+            "@keyframes anim6": {
+              "0%": {
+                "transform": "translateY(0)",
+                "animation-timing-function": "ease-out"
+              },
+              "5%": {
+                "transform": "translateY(-30px)",
+                "animation-timing-function": "ease-in"
+              },
+              "15%": {
+                "transform": "translateY(0)",
+                "animation-timing-function": "ease-out"
+              },
+              "25%": {
+                "transform": "translateY(-30px)",
+                "animation-timing-function": "ease-in"
+              },
+              "38%": {
+                "transform": "translateY(0)",
+                "animation-timing-function": "ease-out"
+              },
+              "52%": {
+                "transform": "translateY(-30px)",
+                "animation-timing-function": "ease-in"
+              },
+              "70%": {
+                "transform": "translateY(0)",
+                "animation-timing-function": "ease-out"
+              },
+              "85%": {
+                "transform": "translateY(-30px)",
+                "animation-timing-function": "ease-in"
+              },
+              "100%": {
+                "transform": "translateY(50px)",
+                "animation-timing-function": "ease-in"
+              }
+            },
+            ".dot7 .dot": {
+              "animation": "anim7 0.5s ease alternate infinite",
+              "border-radius": "50%"
+            },
+            ".dot7 .dot:nth-child(1)": {
+              "animation-delay": "0.25s"
+            },
+            ".dot7 .dot:nth-child(2)": {
+              "animation-delay": "0.5s"
+            },
+            ".dot7 .dot:nth-child(3)": {
+              "animation-delay": "0.75s"
+            },
+            ".dot7 .dot:nth-child(4)": {
+              "animation-delay": "1s"
+            },
+            "@keyframes anim7": {
+              "0%": {
+                "transform": "translateZ(0)",
+                "filter": "blur(0)",
+                "opacity": "1"
+              },
+              "100%": {
+                "transform": "translateZ(-30px)",
+                "filter": "blur(10px)",
+                "opacity": "0"
+              }
+            },
+            ".dot8 .dot": {
+              "animation": "anim8 1s ease alternate infinite",
+              "border-radius": "50%"
+            },
+            ".dot8 .dot:nth-child(1)": {
+              "animation-delay": "0.25s"
+            },
+            ".dot8 .dot:nth-child(2)": {
+              "animation-delay": "0.5s"
+            },
+            ".dot8 .dot:nth-child(3)": {
+              "animation-delay": "0.75s"
+            },
+            ".dot8 .dot:nth-child(4)": {
+              "animation-delay": "1s"
+            },
+            "@keyframes anim8": {
+              "0%": {
+                "transform": "translateZ(-1400px) translateY(20px)",
+                "filter": "blur(0)",
+                "opacity": "1"
+              },
+              "100%": {
+                "transform": "translateZ(0) translateY(0)",
+                "filter": "blur(10px)",
+                "opacity": "0"
+              }
+            },
+            ".dot9 .dot": {
+              "animation": "anim9 1s ease alternate infinite",
+              "border-radius": "50%"
+            },
+            ".dot9 .dot:nth-child(1)": {
+              "animation-delay": "0.25s"
+            },
+            ".dot9 .dot:nth-child(2)": {
+              "animation-delay": "0.5s"
+            },
+            ".dot9 .dot:nth-child(3)": {
+              "animation-delay": "0.75s"
+            },
+            ".dot9 .dot:nth-child(4)": {
+              "animation-delay": "1s"
+            },
+            "@keyframes anim9": {
+              "0%": {
+                "background-color": "#fff",
+                "transform": "rotate3d(1, 1, 0, -360deg)",
+                "opacity": "0"
+              },
+              "50%": {
+                "background-color": "#fff"
+              },
+              "100%": {
+                "background-color": "orange",
+                "transform": "rotate3d(1, 1, 0, 0deg)",
+                "opacity": "1"
+              }
+            },
+            ".dot10 .dot": {
+              "animation": "anim10 2s cubic-bezier(0.77, 0, 0.175, 1) alternate infinite",
+              "border-radius": "50%",
+              "width": "50px",
+              "height": "50px"
+            },
+            "@keyframes anim10": {
+              "0%": {
+                "border-top-left-radius": "50%",
+                "border-top-right-radius": "50%",
+                "border-bottom-right-radius": "50%",
+                "border-bottom-left-radius": "50%"
+              },
+              "12.5%": {
+                "border-top-left-radius": "50%",
+                "border-top-right-radius": "50%",
+                "border-bottom-right-radius": "50%",
+                "border-bottom-left-radius": "0",
+                "transform": "rotate(45deg)"
+              },
+              "25%": {
+                "border-top-left-radius": "50%",
+                "border-top-right-radius": "50%",
+                "border-bottom-right-radius": "0",
+                "border-bottom-left-radius": "0",
+                "transform": "rotate(90deg)"
+              },
+              "37.5%": {
+                "border-top-left-radius": "50%",
+                "border-top-right-radius": "0",
+                "border-bottom-right-radius": "0",
+                "border-bottom-left-radius": "0",
+                "transform": "rotate(135deg)"
+              },
+              "50%": {
+                "border-top-left-radius": "0",
+                "border-top-right-radius": "0",
+                "border-bottom-right-radius": "0",
+                "border-bottom-left-radius": "0",
+                "transform": "rotate(180deg)",
+                "background-color": "orange"
+              },
+              "62.5%": {
+                "border-top-left-radius": "0",
+                "border-top-right-radius": "0",
+                "border-bottom-right-radius": "0",
+                "border-bottom-left-radius": "50%",
+                "transform": "rotate(225deg)"
+              },
+              "75%": {
+                "border-top-left-radius": "0",
+                "border-top-right-radius": "0",
+                "border-bottom-right-radius": "50%",
+                "border-bottom-left-radius": "50%",
+                "transform": "rotate(270deg)"
+              },
+              "87.5%": {
+                "border-top-left-radius": "0",
+                "border-top-right-radius": "50%",
+                "border-bottom-right-radius": "50%",
+                "border-bottom-left-radius": "50%",
+                "transform": "rotate(315deg)"
+              },
+              "100%": {
+                "border-top-left-radius": "50%",
+                "border-top-right-radius": "50%",
+                "border-bottom-right-radius": "50%",
+                "border-bottom-left-radius": "50%",
+                "transform": "rotate(360deg)"
+              }
+            },
+            ".dot11": {
+              "position": "relative",
+              "background-color": "none",
+              "width": "50%",
+              "height": "50%"
+            },
+            ".dot11 .dot": {
+              "border-radius": "50%",
+              "position": "absolute",
+              "width": "20px",
+              "height": "20px",
+              "background-color": "springgreen",
+              "border": "none"
+            },
+            ".dot11 .dot:nth-child(1)": {
+              "top": "0%"
+            },
+            ".dot11 .dot:nth-child(2)": {
+              "bottom": "0"
+            },
+            ".dot11 .jump": {
+              "animation": "jump 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite alternate",
+              "z-index": "2",
+              "width": "25px",
+              "height": "25px"
+            },
+            "@keyframes jump": {
+              "0%, 100%": {
+                "left": "50%",
+                "top": "0",
+                "transform": "translateX(-50%)"
+              },
+              "25%": {
+                "left": "100%",
+                "top": "50%",
+                "transform": "translate(-100%, -50%)"
+              },
+              "50%": {
+                "left": "50%",
+                "top": "100%",
+                "transform": "translate(-50%, -100%)"
+              },
+              "75%": {
+                "left": "0",
+                "top": "50%",
+                "transform": "translateY(-50%)"
+              }
+            },
+            ".dot12": {
+              "position": "relative"
+            },
+            ".dot12 .dot": {
+              "width": "20px",
+              "height": "20px",
+              "position": "absolute",
+              "border-radius": "50%"
+            },
+            ".d1": {
+              "left": "0%",
+              "animation": "dotLeft 1s ease infinite alternate",
+              "background-color": "orange"
+            },
+            ".d2": {
+              "left": "100%",
+              "animation": "dotRight 1s ease infinite alternate",
+              "background-color": "orange"
+            },
+            ".d11": {
+              "top": "0%",
+              "animation": "dotTop 1s ease infinite alternate",
+              "background-color": "#fff"
+            },
+            ".d21": {
+              "top": "100%",
+              "animation": "dotBottom 1s ease infinite alternate",
+              "background-color": "#fff"
+            },
+            "@keyframes dotLeft": {
+              "0%": {
+                "left": "0%"
+              },
+              "50%": {
+                "background-color": "#fff"
+              },
+              "100%": {
+                "left": "calc(100% - 20px)",
+                "background-color": "#fff"
+              }
+            },
+            "@keyframes dotRight": {
+              "0%": {
+                "left": "calc(100% - 20px)"
+              },
+              "50%": {
+                "background-color": "#fff"
+              },
+              "100%": {
+                "left": "0%",
+                "background-color": "#fff"
+              }
+            },
+            "@keyframes dotTop": {
+              "0%": {
+                "top": "0%"
+              },
+              "50%": {
+                "background-color": "orange"
+              },
+              "100%": {
+                "top": "calc(100% - 20px)",
+                "background-color": "orange"
+              }
+            },
+            "@keyframes dotBottom": {
+              "0%": {
+                "top": "calc(100% - 20px)"
+              },
+              "50%": {
+                "background-color": "orange"
+              },
+              "100%": {
+                "top": "0%",
+                "background-color": "orange"
+              }
+            }
+          },
+          "_name": "content4",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section class=\"content4\" group=\"Content\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"9\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" step=\"1\" value=\"12\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#111111\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"title col-md-12 col-lg-{{textWidth}}\">\n                <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-4\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\">\n                    <b>Article Title with Solid Background</b>\n                </h3>\n                <h4 class=\"mbr-section-subtitle align-center mbr-fonts-style mb-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                    You can arrange your articles with the Mobirise website design software.\n                </h4>\n                \n                <div class=\"container-preloaders\">\n  <div class=\"dots dot1\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots dot2\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots dot3\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots dot4\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots dot5\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots dot6\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots dot7\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots dot8\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots dot9\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots dot10\">\n    <div class=\"dot\"></div>\n  </div>\n\n  <div class=\"dots dot11\">\n    <div class=\"dot\"></div>\n    <div class=\"dot\"></div>\n    <div class=\"dot jump\"></div>\n  </div>\n\n  <div class=\"dots dot12\">\n    <div class=\"dot d1\"></div>\n    <div class=\"dot d2\"></div>\n    <div class=\"dot d11\"></div>\n    <div class=\"dot d21\"></div>\n  </div>\n</div>\n                \n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-primary\" href=\"https://mobiri.se\">LEARN MORE</a>\n                    <a class=\"btn btn-primary-outline\" href=\"https://mobiri.se\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "syG8Mw6zYv",
+          "_anchor": "content4-3",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "overflow": "hidden",
+            ".media-container-row .mbr-text": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "footer7",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section class=\"footer7\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background5.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#111111\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container scrollanimation animated fadeIn animate__slower\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"col-12\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\" data-app-placeholder=\"Type Text\">\n                    © Copyright 2021 Igor Kapustin - All Rights Reserved\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "syGhd6gz4v",
+          "_anchor": "footer7-7",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footers",
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
