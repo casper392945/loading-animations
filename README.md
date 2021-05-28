@@ -1,2 +1,2 @@
-# loading-animations
+# Loading Animations
 GitHub Pages
